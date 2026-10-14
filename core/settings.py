@@ -78,7 +78,7 @@ INSTALLED_APPS = [
 # Celery setup config
 
 CELERY_BROKER_URL = (
-    f"sqla+postgresql://" 
+    f"sqla+postgresql+psycopg2://" 
     f"{read_secret('/app/secrets/postgres_user.txt')}:"
     f"{read_secret('/app/secrets/postgres_password.txt')}" 
     f"@db:5432/"
